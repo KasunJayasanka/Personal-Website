@@ -12,6 +12,28 @@ window.onscroll = () =>{
     menu.classList.remove("move");
 }
 
+const text=document.querySelector('.sec-text');
+const text1=document.querySelector('.first-text');
+
+const textLoad = () =>{ 
+    
+    setTimeout(()=>{
+        text.textContent="a Web Developer";
+    },0 );
+
+    setTimeout(()=>{
+        text.textContent="an Undergraduate";
+    },4000 );
+
+    setTimeout(()=>{
+        text.textContent="an AIESECer";
+    },8000 );
+    
+}
+
+textLoad();
+setInterval(textLoad,16000);
+
 function validate()
 {
     let name=document.querySelector(".name");
