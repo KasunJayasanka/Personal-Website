@@ -140,7 +140,7 @@ header{
 
 .home-content{
     position: relative;
-    max-width: 600px;
+    max-width: 900px;
     width: 100%;
     margin: auto;
     display: flex;
@@ -172,7 +172,45 @@ header{
     align-items: center;
     justify-content: center;
     text-align: center;
+}
 
+.animate-container{
+    width:75%;
+    overflow: hidden;
+    bottom: 0;
+    margin-top: 2px;
+}
+
+.animate-container .text{
+    position: relative;
+    color: #2a1295fd;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.animate-container .text.first-text{
+    color: #fff;
+}
+
+.text.sec-text:before{
+    content: "";
+    position: absolute;
+    top:0;
+    left: 0;
+    height:100%;
+    width:100%;
+    background-color: #090a1a;
+    border-left:2px solid #4070f4;
+    animation: animate 4s steps(12) infinite;
+}
+
+@keyframes animate{
+    40%, 60%{
+        left:100%;
+    }
+    100%{
+        right:0%;
+    }
 }
 
 .home-text h3{
@@ -445,9 +483,10 @@ header{
         padding: 12px 0;
     }
     .heading{
-        font-size: 4rem;
+        font-size: 3rem;
     }
 }
+
 
 @media(max-width:775px)
 {
@@ -501,7 +540,13 @@ header{
         padding: 50px 20px;
         transition: 0.5s all cubic-bezier(0.075, 0.82, 0.165, 1);
     }
+    .animate-container .text {
+        font-size: 25px;
+    }
 }
+
+
+    
 
 @media(max-width:635px){
     .about-content{
@@ -521,6 +566,10 @@ header{
     .about-text p{
         font-size: 0.825rem;
         margin-bottom: 1.3rem;
+    }
+
+    .animate-container .text {
+        font-size: 20px;
     }
 }
 
@@ -544,8 +593,8 @@ header{
     .home-text p br{
         display: contents;
     }
-    .heading{
-        font-size: 3rem;
+    .heading {
+        font-size: 2rem;
     }
     .about-data h2{
         font-size: 1.5rem;
@@ -560,11 +609,28 @@ header{
         flex-direction: column;
         row-gap: 1rem;
     }
+    .animate-container{
+        width: 100%;
+    }
 }
+    
+
 
 @media(max-width:325px){
     .navbar{
         width: 100%;
+    }
+    .heading {
+        font-size: 2rem;
+    }
+
+    .animate-container{
+        width: 100%;
+    }
+
+    .animate-container .text{
+        font-size: 20px;
+        font-weight: 300;
     }
 }
 
