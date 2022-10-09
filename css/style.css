@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;800&family=Roboto+Mono:wght@300;500;600&display=swap');
+
 
 *{
     font-family: 'Montserrat', sans-serif;
@@ -20,7 +21,8 @@
 
 body{
     color: var(--bg--color);
-    background: var(--body-color)
+    background: var(--body-color);
+    
 }
 
 html::-webkit-scrollbar{
@@ -175,6 +177,7 @@ header{
 }
 
 .animate-container{
+    font-family: 'Roboto Mono', monospace;
     width:75%;
     overflow: hidden;
     bottom: 0;
@@ -467,6 +470,137 @@ header{
     transition: 0.3s;
 }
 
+
+.wrapper{
+    align-items: center;
+    width: 40%;
+    min-width: 300px;
+    position: relative;
+    transform: translate(-50%,-50%);
+    top: 300px;
+    left: 0px;
+    right: 0px;
+    margin-left: 50%;
+    margin-right: 50%;
+}
+
+
+.container-skills{
+    width: 100%;
+    padding: 50px 30px;
+    background-color: rgba(255,255,255,0.06);
+    border: 2px solid rgba(255,255,255,0.06);
+    border-radius: 10px;
+    box-shadow: 0 20px 30px rgba(0,0,0,0.2);
+    backdrop-filter: blur(10px);
+}
+
+.container-skills *{
+    font-family: "Poppins",sans-serif;
+    color: #ffffff;
+    font-weight: 500;
+}
+h2{
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+}
+.skills:not(:last-child){
+    margin-bottom: 30px;
+}
+.details{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.bar{
+    position: relative;
+    background-color: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.06);
+    padding: 7px 10px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+}
+.bar div{
+    position: relative;
+    width: 0;
+    height: 5px;
+    border-radius: 10px;
+    background-color: #badefc;
+    border: 1px solid #1c97fc;
+    box-shadow: 0 0 5px rgba(28,151,252,0.6);
+}
+#at-bar{
+    animation: at-fill 2s forwards;
+}
+@keyframes at-fill{
+    100%{
+        width: 80%;
+    }
+}
+
+#creativity-bar{
+    animation: creativity-fill 2s forwards;
+}
+@keyframes creativity-fill{
+    100%{
+        width: 70%;
+    }
+}
+
+#html-bar{
+    animation: html-fill 2s forwards;
+}
+@keyframes html-fill{
+    100%{
+        width: 90%;
+    }
+}
+#css-bar{
+    animation: css-fill 2s forwards;
+}
+@keyframes css-fill{
+    100%{
+        width: 80%;
+    }
+}
+#js-bar{
+    animation: js-fill 2s forwards;
+}
+@keyframes js-fill {
+    100%{
+        width: 70%;
+    }
+}
+#python-bar{
+    animation: python-fill 2s forwards;
+}
+@keyframes python-fill{
+    100%{
+        width: 95%;
+    }
+}
+
+#c-bar{
+    animation: c-fill 2s forwards;
+}
+@keyframes c-fill{
+    100%{
+        width: 90%;
+    }
+}
+
+#ps-bar{
+    animation: ps 2s forwards;
+}
+@keyframes ps{
+    100%{
+        width: 75%;
+    }
+}
+
+
+
 @media(max-width:990px){
     .container{
         margin: 0 auto;
@@ -612,6 +746,8 @@ header{
     .animate-container{
         width: 100%;
     }
+
+    
 }
     
 
@@ -631,6 +767,11 @@ header{
     .animate-container .text{
         font-size: 20px;
         font-weight: 300;
+    }
+
+    .wrapper{
+        
+        top:300px;left: 150px;bottom: 0px;margin-right: 18.764;margin-left: 18.764;right: 75px;border-left-width: 18.764;margin-right: 0px;
     }
 }
 
