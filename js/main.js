@@ -80,7 +80,7 @@ function success()
 {
     swal({
         title: "Email sent successfully",
-        text: "I will reply with 24 hours",
+        text: "I will reply within 24 hours",
         icon: "success",
       });
 }
