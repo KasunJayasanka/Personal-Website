@@ -570,11 +570,12 @@ header{
     min-width: 300px;
     position: relative;
     transform: translate(-50%,-50%);
-    top: 300px;
-    left: 0px;
     right: 0px;
     margin-left: 50%;
     margin-right: 50%;
+    top: 475px;
+    bottom: 0px;
+    left: 0px;
 }
 
 
@@ -840,7 +841,10 @@ h2{
         width: 100%;
     }
 
-    
+    .content {
+        width: calc(50% - 2rem);
+        font-size: 12px;
+    }
 }
     
 
