@@ -18,11 +18,11 @@ const text1=document.querySelector('.first-text');
 const textLoad = () =>{ 
     
     setTimeout(()=>{
-        text.textContent="a Web Developer";
+        text.textContent="an Undergraduate";
     },0 );
 
     setTimeout(()=>{
-        text.textContent="an Undergraduate";
+        text.textContent="a Web Developer";
     },4000 );
 
     setTimeout(()=>{
