@@ -1,3 +1,4 @@
+// Navigation Bar
 let menu = document.querySelector(".menu-icon");
 let navbar = document.querySelector(".navbar");
 
@@ -11,6 +12,20 @@ window.onscroll = () =>{
     navbar.classList.remove("navbar-y");
     menu.classList.remove("move");
 }
+
+let header=document.querySelector('header');
+
+window.addEventListener("scroll",()=>{
+    header.classList.toggle("header-active",window.scrollY>0);
+});
+
+let scrollTop=document.querySelector('.scroll-top');
+
+window.addEventListener("scroll",()=>{
+    scrollTop.classList.toggle("scroll-active",window.scrollY>=400);
+});
+
+// Text Animation
 
 const text=document.querySelector('.sec-text');
 const text1=document.querySelector('.first-text');
@@ -33,6 +48,8 @@ const textLoad = () =>{
 
 textLoad();
 setInterval(textLoad,16000);
+
+//Contact Form
 
 function validate()
 {
@@ -85,19 +102,8 @@ function success()
       });
 }
 
-let header=document.querySelector('header');
+// Timeline
 
-window.addEventListener("scroll",()=>{
-    header.classList.toggle("header-active",window.scrollY>0);
-});
-
-let scrollTop=document.querySelector('.scroll-top');
-
-window.addEventListener("scroll",()=>{
-    scrollTop.classList.toggle("scroll-active",window.scrollY>=400);
-});
-
- 
 "use strict";
 
 function qs(selector, all = false) {
