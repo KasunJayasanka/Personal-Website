@@ -56,6 +56,8 @@ li{
     width: 100%;
 }
 
+/* Navigation Bar */
+
 header{
     position: fixed;
     top: 0;
@@ -131,6 +133,8 @@ header{
 .move .line3{
     transform: rotate(45deg) translate(-5px,-5px);
 }
+
+/* Home Page */
 
 .home{
     min-height: 600px;
@@ -288,6 +292,8 @@ header{
     margin-bottom: 2rem;
 }
 
+/* About Section */
+
 .about-content{
     display: grid;
     grid-template-columns: repeat(2,1fr);
@@ -337,6 +343,8 @@ header{
 
 }
 
+/* Enthusiastic Fields */
+
 .fields-content{
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -377,6 +385,69 @@ header{
 .fields-box p{
     font-size: 0.9rem;
 }
+
+/* Portfolio */
+
+.portfolio-content{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2rem;
+}
+
+.portfolio-box{
+    position: relative;
+    width: 100%;
+    height: 320px;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.portfolio-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: brightness(40%);
+}
+
+.portfolio-overlay{
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: hsl(234, 45%, 16%,0.7);
+}
+
+.portfolio-overlay h2{
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.portfolio-overlay .bx{
+    font-size: 24px;
+    padding: 10px;
+    background: var(--main-color);
+    color: var(--bg--color);
+    border-radius: 4px;
+
+}
+
+.portfolio-overlay .bx:hover{
+    background: #546eff;
+    transition: 0.3 all linear;
+}
+
+.portfolio-box:hover .portfolio-overlay{
+    top: 0;
+    transition: 0.5s all ease;
+}
+
 
 /* Timeline */
 
@@ -471,6 +542,8 @@ header{
     opacity: 1;
 }
 
+/* Contact Form */
+
 .contact .color{
     color: var(--main-color);
     font-size: 2.5rem;
@@ -509,6 +582,8 @@ header{
     background: #081976;
     transition: 0.3s all linear;
 }
+
+/* Footer */
 
 .footer{
     display: flex;
@@ -563,6 +638,8 @@ header{
     transition: 0.3s;
 }
 
+/* Skils Section */
+
 
 .wrapper{
     align-items: center;
@@ -594,6 +671,7 @@ header{
     color: #ffffff;
     font-weight: 500;
 }
+
 h2{
     margin-bottom: 40px;
     letter-spacing: 2px;
@@ -624,9 +702,11 @@ h2{
     border: 1px solid #1c97fc;
     box-shadow: 0 0 5px rgba(28,151,252,0.6);
 }
+
 #at-bar{
     animation: at-fill 2s forwards;
 }
+
 @keyframes at-fill{
     100%{
         width: 80%;
@@ -693,7 +773,7 @@ h2{
     }
 }
 
-
+/* Mobile Responsive Media Queries */
 
 @media(max-width:990px){
     .container{
@@ -712,6 +792,9 @@ h2{
     }
     .heading{
         font-size: 3rem;
+    }
+    .portfolio-box{
+        height: 257px;
     }
 }
 
@@ -770,6 +853,10 @@ h2{
     }
     .animate-container .text {
         font-size: 25px;
+    }
+
+    .portfolio-box{
+        height: 245px;
     }
 }
 
@@ -844,6 +931,10 @@ h2{
     .content {
         width: calc(50% - 2rem);
         font-size: 12px;
+    }
+
+    .portfolio-content{
+        grid-template-columns: 1fr;
     }
 }
     
